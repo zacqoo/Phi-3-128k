@@ -16,7 +16,7 @@ class InferlessPythonModel:
         )
 
     def infer(self, input_data):
-        chunks = input_data['chunks']
+        prompt = input_data['prompt']
         roles = input_data['roles']
 
         generation_args = {
@@ -25,7 +25,7 @@ class InferlessPythonModel:
             "temperature": 0.0,
             "do_sample": False,}
         messages = []
-        messages.append({ "role": roles , "content" : chunks })
+        messages.append({ "role": roles , "content" : prompt })
         output = self.pipe(messages, **generation_args)
         return {"result": output[0]['generated_text'] }
 
