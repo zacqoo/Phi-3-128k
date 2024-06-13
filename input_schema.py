@@ -5,12 +5,12 @@ INPUT_SCHEMA = {
         'shape': [1],
         'example': ["user"]
     },
-    "chunks": {
+    "prompt": {
         'datatype': 'STRING',
         'required': True,
         'shape': [1],
         'example': [
-            "Inferless is a machine learning model deployment platform.",
+            "What is deep learning?",
         ]
     }
 }
