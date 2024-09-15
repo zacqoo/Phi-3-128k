@@ -20,9 +20,9 @@ class InferlessPythonModel:
         roles = input_data['roles']
 
         generation_args = {
-            "max_new_tokens": 500,
-            "return_full_text": False,
-            "temperature": 0.0,
+            "max_new_tokens": 4096,
+            "return_full_text": True,
+            "temperature": 0.5,
             "do_sample": False,}
         messages = []
         messages.append({ "role": roles , "content" : prompt })
