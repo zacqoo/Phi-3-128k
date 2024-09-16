@@ -21,7 +21,7 @@ class InferlessPythonModel:
 
         generation_args = {
             "max_new_tokens": 4096,
-            "return_full_text": True,
+            "return_full_text": False,
             "temperature": 0.5,
             "do_sample": False,}
         messages = []
